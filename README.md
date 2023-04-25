@@ -20,8 +20,27 @@ Link: https://editor.p5js.org/Sophiek/sketches/f3AO4_LCU
 -------------------------------------------------------------------------------------------------------------------------------
 
 ## Question 2
+For this skecth I just added on to the code that was used for the first question. 
+In setup I added a for let statements to make the bubbles show up randomly on the canvas, and create 50 bubbles. To make each bibble different I added a random length, random width (for position on the canvas) and I added a random muber for the radius of each bubble. 
+```Javascript
+  for (let i = 0; i < 50; i++) {
+    let x = random(width)
+    let y = random(height)
+    let r = random(3, 50)
 
-Link:
+    bubbles[i] = new Bubble(x, y, r);
+  }
+  ```
+  I also had to call a similar for let statement in draw to make the bubbles show on the screen as well as move.
+  ```Javascript 
+    for (let i = 0; i < bubbles.length; i++) {
+    bubbles[i].move();
+    bubbles[i].show();
+  }
+  ```
+  
+Link: https://editor.p5js.org/Sophiek/sketches/6R34gIHF_ 
+
 -------------------------------------------------------------------------------------------------------------------------------
 
 ## Question 3: Populate Sim game
@@ -47,6 +66,7 @@ class Butterfly {
   catcherNet.show();
   ```
   Link: https://editor.p5js.org/Sophiek/sketches/0Q9NOhTC3
+  
   ----------------------------------------------------------------------------------------------------------------------------------------
   
   ## Question 4
